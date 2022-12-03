@@ -1,6 +1,6 @@
 class Product:
 
-    def __init__(self,code,price,special_price):
+    def __init__(self,code,price,special_price=None):
         self.code = code
         self.price = price
         self.special_price = special_price

@@ -7,8 +7,8 @@ from Checkout import Basket
 shop = {}
 shop["A"] = Product("A",50,(140,3))
 shop["B"] = Product("B",35,(60,2))
-shop["C"] = Product("C",25, (None))
-shop["D"] = Product("D",12, (None))
+shop["C"] = Product("C",25)
+shop["D"] = Product("D",12)
 
 def user_input():
     choices = {}

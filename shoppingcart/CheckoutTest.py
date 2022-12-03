@@ -17,8 +17,8 @@ class CheckoutTest(unittest.TestCase):
     def test_total_price(myBasket):
         shop = {}
         shop["A"] = Product("A", 50, (140, 3))
-        shop["C"] = Product("C", 25, (None))
-        shop["D"] = Product("D", 12, (None))
+        shop["C"] = Product("C", 25)
+        shop["D"] = Product("D", 12)
         client = [{"code": "A", "quantity": 3}, {"code": "C", "quantity": 1}, {"code": "D", "quantity": 2}]
         myBasket = Basket(client)
         myBasket.basket_cost(shop)
@@ -27,8 +27,8 @@ class CheckoutTest(unittest.TestCase):
     def test_existence(myBasket):
         shop = {}
         shop["A"] = Product("A", 50, (140, 3))
-        shop["C"] = Product("C", 25, (None))
-        shop["D"] = Product("D", 12, (None))
+        shop["C"] = Product("C", 25)
+        shop["D"] = Product("D", 12)
         client = [{"code": "AA", "quantity": 3}, {"code": "C", "quantity": 1}, {"code": "D", "quantity": 2}]
         myBasket = Basket(client)
         assert myBasket.check_product_existence(client, shop) == -1, "incorrect check for products"
