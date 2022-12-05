@@ -1,4 +1,5 @@
 import sys
+import json
 
 from Item import Product
 from Checkout import Basket
@@ -35,7 +36,8 @@ client = []
 choices = user_input()
 for key in choices:
     client.append({"code":key,"quantity":choices[key]})
-print(client)
+json_data = json.dumps(client)
+print(json_data)
 
 mybasket = Basket(client)
 mybasket.basket_cost(shop)
